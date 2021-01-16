@@ -23,12 +23,14 @@ const movieDB = {
       "Скотт Пилигрим против...",
     ],
   },
-  promo = document.getElementsByClassName("promo__adv"),
+  promo = document.querySelectorAll(".promo__adv img"),
   genre = document.getElementsByClassName("promo__genre"),
   backgr = document.querySelector(".promo__bg"),
   movie = document.querySelector(".promo__interactive-list");
 
-promo[0].remove();
+promo.forEach((item) => {
+  item.remove();
+});
 
 genre[0].textContent = "Драма";
 
